@@ -187,15 +187,16 @@
         }
       }
       function checkrepass() {
-        var repass = document.getElementById("repass").value;
-        if (repass.length < 6) {
-          document.getElementById("repasspop").innerHTML = "POOR OR MISMATCH";
-          document.getElementById("repasspop").style.color = "red";
-        } else {
-          document.getElementById("repasspop").innerHTML = "Good";
-          document.getElementById("repasspop").style.color = "green";
-        }
-      }
+    var pass = document.getElementById("pass").value;
+    var repass = document.getElementById("repass").value;
+    if (repass.length < 6 || repass !== pass) {
+        document.getElementById("repasspop").innerHTML = "POOR OR MISMATCH";
+        document.getElementById("repasspop").style.color = "red";
+    } else {
+        document.getElementById("repasspop").innerHTML = "Good";
+        document.getElementById("repasspop").style.color = "green";
+    }
+}
       function checkage() {
         var age = document.getElementById("age").value;
         if (age.length < 1) {
